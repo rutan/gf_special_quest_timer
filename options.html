@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>グラブル時限クエスト通知タイマー</title>
+    <link rel="stylesheet" href="css/options.css">
+</head>
+<body>
+    <div id="js-options" class="wrapper">
+        <div class="block">
+            <h1>通知するグループ</h1>
+            <ul>
+                <li v-repeat="groups" class="check-button check-button-vertical {{$value ? 'active' : ''}}">
+                    <label>
+                        <input type="checkbox" name="group-{{$key}}" checked={{$value}} v-on='click:onClickGroup' data-name="{{$key}}">
+                        {{$key}}
+                    </label>
+                </li>
+            </ul>
+        </div>
+
+        <div class="block">
+            <h1>通知内容</h1>
+            <div class="check-button check-button-full {{flag ? 'active' : ''}}">
+                <label>
+                    <input name="hoge" type="checkbox" v-model='flag' v-on='click:onClickFlag'>
+                    ☆マークの時間のみ通知する
+                </label>
+            </div>
+        </div>
+
+        <div class="footer">
+            <a class="button" href="http://gf.rutan.info" target="_blank">今日のスケジュールを確認</a>
+        </div>
+    </div>
+    <script src="js/vue.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/options.js"></script>
+</body>
+</html>
