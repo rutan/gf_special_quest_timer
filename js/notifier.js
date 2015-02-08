@@ -67,7 +67,7 @@
             title: '【' + groupID + 'グループ】時限クエスト開催',
             message: hour + '時' + '（' + (specialFlag ? '☆' : '通常') + '）',
             type: 'basic',
-            iconUrl: 'icons/gf-icon_128.png'
+            iconUrl: 'icons/128.png'
         }, function(){});
     };
 
